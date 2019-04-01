@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("common/models/haarcascade_frontalface_alt.xml")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("common/models/haarcascade_frontalface_alt2.xml")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("common/models/haarcascade_frontalface_alt_tree.xml")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("common/models/haarcascade_frontalface_default.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/haarcascade_frontalface_alt.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/haarcascade_frontalface_alt2.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/haarcascade_frontalface_alt_tree.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/haarcascade_frontalface_default.xml")]
 
 

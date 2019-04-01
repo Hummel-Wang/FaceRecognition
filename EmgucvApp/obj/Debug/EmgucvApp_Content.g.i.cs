@@ -8,9 +8,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("common/models/haarcascade_frontalface_alt.xml")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("common/models/haarcascade_frontalface_alt2.xml")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("common/models/haarcascade_frontalface_alt_tree.xml")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("common/models/haarcascade_frontalface_default.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e5%88%98%e5%be%b7%e5%8d%8e_cd604f1b-c5c2-4575-8ac1-4b870e9" +
+    "0101e.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e5%8c%85%e7%9a%ae_986b2ef2-7ee1-427b-abee-c8a10963be66.jpg" +
+    "")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e5%94%90%e5%83%a7_eb833a99-9b42-4981-ba79-fd96c22f9f6b.jpg" +
+    "")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e5%a4%a7%e5%a4%a9%e4%ba%8c_b73432da-4c28-4e49-8a68-f888eeb" +
+    "03deb.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e5%a7%9a%e6%98%8e_f5f84afd-4083-476b-a607-ba401b6af932.jpg" +
+    "")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e5%bc%a0%e5%ad%a6%e5%8f%8b_334b583d-1966-4839-b139-6a6345c" +
+    "7fc42.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e6%b2%99%e5%92%8c%e5%b0%9a_772a8aee-6e6c-481e-8135-eb15393" +
+    "465d3.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e7%84%a6%e7%9a%ae_22777c53-2c15-480e-8f08-cbc6a63f705d.jpg" +
+    "")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e7%8c%aa%e5%85%ab%e6%88%92_7db691a8-9ad1-49b9-a3cb-94d1525" +
+    "35086.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e9%83%ad%e5%af%8c%e5%9f%8e_19ac18bd-2c18-42ac-ba77-4564df3" +
+    "ada66.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e9%99%88%e6%b5%a9%e5%8d%97_3c35d0b2-2b04-4fbc-9e87-0913d8e" +
+    "fb209.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/trainedfaces/%e9%bb%8e%e6%98%8e_d70a231a-c908-4537-960b-67fa4ec4ef0e.jpg" +
+    "")]
 
 

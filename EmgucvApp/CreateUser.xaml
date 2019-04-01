@@ -1,0 +1,26 @@
+﻿<Window x:Class="EmgucvApp.CreateUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmgucvApp"
+        mc:Ignorable="d"
+        Title="CreateUser" Height="400" Width="550" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid  Background="Black" Opacity="0.8">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="0.7*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="姓名：" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="LightGreen" FontSize="20"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="编号：" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="LightGreen" FontSize="20"></TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" Height="50" Width="200" HorizontalAlignment="Left" Name="tbName" VerticalContentAlignment="Center" FontSize="20"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1" Height="50" Width="200" HorizontalAlignment="Left" Name="tbNo" VerticalContentAlignment="Center" FontSize="20" IsEnabled="False"></TextBox>
+       
+        <Button Grid.Row="2" Grid.Column="1" Width="200" Height="50" Name="btnCreateUser" HorizontalAlignment="Left" Content="保存" FontSize="20" Click="BtnCreateUser_Click"></Button>
+    </Grid>
+</Window>
