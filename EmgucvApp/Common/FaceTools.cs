@@ -2,6 +2,7 @@
 using Emgu.CV.Structure;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -147,6 +148,8 @@ namespace EmgucvApp.Common
             #endregion
             return fdo;
         }
+
+      
 
         #region 自定义类及访问类型
         public class TrainedFileList

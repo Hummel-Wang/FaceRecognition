@@ -55,6 +55,7 @@
       <HintPath>..\packages\OpenTK.GLControl.1.1.2225.0\lib\net20\OpenTK.GLControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -93,6 +94,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Common\FaceTools.cs" />
+    <Compile Include="Common\ReadWriteConfig.cs" />
     <Compile Include="Common\UserInfo.cs" />
     <Compile Include="CreateUser.xaml.cs">
       <DependentUpon>CreateUser.xaml</DependentUpon>

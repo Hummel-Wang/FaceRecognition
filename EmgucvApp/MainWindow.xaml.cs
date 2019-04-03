@@ -66,28 +66,20 @@ namespace EmgucvApp
         /// <param name="e"></param>
         private void CollectionSample_Click(object sender, RoutedEventArgs e)
         {
-            System.Drawing.Rectangle rectangle = new System.Drawing.Rectangle(140, 50, 400, 430);
-            Mat showMat = new Mat(capture.QueryFrame(), rectangle);
-            currentfdo = _faceTools.GetFaceRectangle(showMat);
-            getCurrentFaceSample(0);
-            collectionSample.Visibility = Visibility.Collapsed;
-            saveSample.Visibility = Visibility.Visible;
-
-        }
-
-        /// <summary>
-        /// 保存采样
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SaveSample_Click(object sender, RoutedEventArgs e)
-        {
-            string filePath = _faceTools.FaceSamplesPath + "\\" + _userInfo.Index.ToString() + "_" + System.Guid.NewGuid().ToString() + ".jpg";
-            sampleImage.Image.Save(filePath);
-            MessageBox.Show("样本保存完毕。");
-
-            collectionSample.Visibility = Visibility.Visible;
-            saveSample.Visibility = Visibility.Collapsed;
+            try
+            {
+                System.Drawing.Rectangle rectangle = new System.Drawing.Rectangle(140, 50, 400, 430);
+                Mat showMat = new Mat(capture.QueryFrame(), rectangle);
+                currentfdo = _faceTools.GetFaceRectangle(showMat);
+                getCurrentFaceSample(0);
+                string filePath = _faceTools.FaceSamplesPath + "\\" + _userInfo.Name.ToString() + "_" + System.Guid.NewGuid().ToString() + ".jpg";
+                sampleImage.Image.Save(filePath);
+                MessageBox.Show("样本保存完毕。");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("样本保存失败。");
+            }
         }
 
         /// <summary>

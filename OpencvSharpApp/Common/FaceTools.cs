@@ -13,9 +13,6 @@ namespace OpencvSharpApp.Common
     public class FaceTools
     {
         #region 
-        private double totalNum = 0;
-        private double errorNum = 0;
-
         public Rect _faceSample;
         /// <summary>
         /// faceSamplePath
@@ -25,12 +22,12 @@ namespace OpencvSharpApp.Common
         /// <summary>
         /// 眼睛分类器
         /// </summary>
-        private CascadeClassifier _eyeClassifier = new CascadeClassifier(System.Windows.Forms.Application.StartupPath + "\\haarcascade_eye.xml");
+        //private CascadeClassifier _eyeClassifier = new CascadeClassifier(System.Windows.Forms.Application.StartupPath + "\\resource\\haarcascade_eye.xml");
 
         /// <summary>
         /// 人脸框分类器
         /// </summary>
-        private CascadeClassifier _faceClassifier = new CascadeClassifier(System.Windows.Forms.Application.StartupPath + "\\haarcascade_frontalface_alt2.xml");
+        private CascadeClassifier _faceClassifier = new CascadeClassifier(System.Windows.Forms.Application.StartupPath + "\\resource\\haarcascade_frontalface_alt2.xml");
 
 
         #endregion
@@ -122,9 +119,9 @@ namespace OpencvSharpApp.Common
         /// </summary>
         /// <param name="emguImage"></param>
         /// <returns></returns>
-        public FaceDetectedObj FaceRecognize(Mat emguImage, bool isScan = false, bool isRecognition = false)
+        public FaceDetectedObj FaceRecognize(Mat imageFrame)
         {
-            FaceDetectedObj fdo = GetFaceRectangle(emguImage);
+            FaceDetectedObj fdo = GetFaceRectangle(imageFrame);
             //Image<Gray, byte> tempImg = fdo.originalImg.ToImage<Gray, byte>();
             Mat tempImg = fdo.originalImg;
             //Add
@@ -136,7 +133,7 @@ namespace OpencvSharpApp.Common
             {
                 foreach (Rect face in fdo.facesRectangle)
                 {
-                    emguImage.Rectangle(face, new Scalar(0, 0, 255)); //给识别出的人脸画矩形框
+                    imageFrame.Rectangle(face, new Scalar(0, 0, 255)); //给识别出的人脸画矩形框
 
                     Mat grayFace = new Mat();
                     tempImg.CopyTo(grayFace);
@@ -153,27 +150,13 @@ namespace OpencvSharpApp.Common
                         string recogniseName = tfr.trainedFileList.trainedFileName[pr].ToString();
                         fdo.Name = recogniseName;
                         fdo.names.Add(recogniseName);
-                        //Console.WriteLine(pr + "---" + recogniseName);
+                        imageFrame.PutText(recogniseName, new OpenCvSharp.Point(200, 100), HersheyFonts.HersheyComplex, 1, Scalar.Red);
                     }
                     #endregion
 
                     _faceSample = face;
                 }
             }
-            //GC.Collect();
-
-            if (fdo.facesRectangle.Count > 0)
-            {
-                totalNum++;
-                if (fdo.Name != "王富")
-                {
-                    errorNum++;
-                }
-                double rate = errorNum / totalNum * 100;
-                string rateStr = rate.ToString("0.00");
-                Console.WriteLine("总识别次数：" + totalNum + "，误识别次数：" + errorNum + "，误识别率为：" + rateStr + "%");
-            }
-
             #endregion
             return fdo;
         }
@@ -194,7 +177,6 @@ namespace OpencvSharpApp.Common
             Image _Image = Image.FromStream(ms);
             return _Image;
         }
-
     }
 
     #region 自定义类及访问类型
