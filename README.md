@@ -20,5 +20,6 @@ Face Recognition Based on C#
 说明：
 
 1.FaceRecognitionDotNet版本也可直接通过NuGet安装FaceRecognitionDotNet来实现。当初调研时看到了有人编译过的源码更好用，所以放弃了。有心人可以尝试。
+https://www.cnblogs.com/RainbowInTheSky/p/10247921.html
 
 2.在FaceRecognitionDotNet版本Demo开发过程中，我发现Emgucv依赖库多，曾想尝试用opencvsharp来代替，但是在人脸检测过程中，始终无法获取到人脸数据，最终放弃了。有心人若尝试成功，烦请留言告知一声。
